@@ -7,7 +7,7 @@ exports.up = function(knex, Promise) {
     table.date('start_datetime').notNullable().defaultsTo(knex.fn.now());
     table.date('end_datetime').notNullable().defaultsTo(knex.fn.now());
     table.integer('venue_id').notNullable();
-    table.foreign('venue_id').references('id').inTable('venues');
+    table.foreign('venue_id').references('id').inTable('venues').onDelete('CASCADE').onUpdate('CASCADE');
   });
 };
 
