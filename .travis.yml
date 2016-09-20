@@ -1,10 +1,15 @@
-language:
-- node_js
+language: node_js
+
 node_js:
-- '6'
-env:
-  global:
-  - NODE_ENV=test
+  - "6.1"
+  - "6.0"
+  - '4.1'
+  - '4.0'
+
+services: pg
+
 before_script:
-  - npm install -g gulp
-script: gulp
+  - npm install -g mocha
+
+script: mocha
+  
