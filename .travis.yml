@@ -1,15 +1,9 @@
-language: node_js
-
+language:
+- node_js
 node_js:
-  - "6.1"
-  - "6.0"
-  - '4.1'
-  - '4.0'
+- '6'
+env:
+  global:
+  - NODE_ENV=test
 
-services: pg
-
-before_script:
-  - npm install -g mocha
-
-script: mocha
-  
+script: 'npm test'
