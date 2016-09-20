@@ -2,8 +2,16 @@ language:
 - node_js
 node_js:
 - '6'
+- '5'
 env:
   global:
   - NODE_ENV=test
-
-script: 'npm test'
+deploy:
+  provider: heroku
+  api_key:
+    secure: GtpSvtpmgY+H/wBdIHmvBf0jzQ0kAEXBKOZfRyNXHJcy8p7uiv5Iv/Q6ILn3VtH1dRFSymqlEgSMHvfDN61o57HXynGqq9aYCL7fDgTEzt+MOQUTCLas0Pr8lf65p8ptYWwPg9RxEay2Q3eQaYizlVIphnzT1c7H/MOaYJiQJqYUuuzNaC2ZoBceLNr+6Y/E/a6m2fqjRMmL0MWHEAcrTAKr3FLppfxPCmkENESnZCqPzCvTNbL41coqew7gd0xehQATz9WfW5U63e8C3/hItFUh1XQxs2IwdNw90Nz+bdo8UrGCPTUcNEKqAhtt5ygPZVZEb2ainQV2wKOCfPTKK6JyZjiGGYEwudOUi0BZvOL68weaGROIHOMXEjtgy/aOR46PH6LP/QNznP1cbmXa2fXOvo5yeRX9EOuwQHsv2A0r9gG1YGKLiMbopFkl7Se+fsOVTIJxCqHKb3z9b8gKsEPxka6ZkIj0U1cSPvr7lW43UjcrAsSyCGTvkkCR6L1qpMB2r4baplT/n6lZCcJ9CQM7jJswSmxIOrHCN3WFcOJUEOsvSJGrY46AfKhOyV7wYAgmJhdKvG0z3moAqMNGCVIXPKgCHnQx29C3qzBPKznhf2tmchloCBZT2vhiWpfOacTcda+n17cAgZovJ/nVDSCX9PtmGKRZtV1oKIgfEqo=
+  app: gentle-shore-48044
+  on:
+    repo: RyanSPando/events-crud
+    branch: master
+    node:'6'
