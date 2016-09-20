@@ -2,7 +2,7 @@ const knex = require('knex');
 
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('events', (table) => {
-    table.uuid();
+    table.increments();
     table.string('title').notNullable().defaultsTo('');
     table.text('description').notNullable().defaultsTo('');
     table.boolean('over_21').notNullable().defaultsTo('false');

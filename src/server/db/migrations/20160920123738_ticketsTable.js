@@ -1,5 +1,3 @@
-const knex = require('knex');
-
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('tickets', (table) => {
     table.increments();
@@ -11,5 +9,5 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable('events');
+  return knex.schema.dropTable('tickets');
 };
