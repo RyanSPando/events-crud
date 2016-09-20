@@ -13,4 +13,5 @@ deploy:
   app: gentle-shore-48044
   on:
     repo: RyanSPando/events-crud
-    node:'6'
+    branch: master
+    node: '6'
