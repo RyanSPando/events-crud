@@ -2,7 +2,7 @@ var faker = require('faker');
 
 exports.seed = (knex, Promise) => {
   return knex('attendees').then(attendee => {
-    let promises =[];
+    let promises = [];
 
     for (let i = 0; i < 100; i++) {
       let promise = knex('attendees').insert({

@@ -8,15 +8,15 @@ exports.seed = (knex, Promise) => {
       const promises = [];
       events.forEach((evenT) => {
           ticketTypes.forEach((type) => {
-          const index = faker.random.number({min:0, max: (ticketTypes.length - 1)});
-          let promise = knex('tickets').insert({
-            name: ticketTypes[index],
-            price: cost[index],
-            event_id: evenT.id
+            const index = faker.random.number({min:0, max: (ticketTypes.length - 1)});
+            let promise = knex('tickets').insert({
+              name: ticketTypes[index],
+              price: cost[index],
+              event_id: evenT.id
+            });
+            promises.push(promise);
           });
-          promises.push(promise);
         });
-      });
       return Promise.all(promises);
     });
   });
