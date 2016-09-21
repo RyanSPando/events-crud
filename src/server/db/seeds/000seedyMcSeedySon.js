@@ -8,7 +8,7 @@ exports.seed = function(knex, Promise) {
         // Inserts seed entries
         knex('venues').insert({
           name: faker.company.companyName(),
-          capacity: faker.random.number({min:5, max: 2000}),
+          capacity: faker.random.number({min:5, max: 40}),
           line_1: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),
@@ -29,7 +29,7 @@ exports.seed = function(knex, Promise) {
           city: faker.address.city(),
           state: faker.address.state(),
           zip: parseInt(faker.address.zipCode().slice(0,5))
-        }),
+        })
       ]);
     });
 };

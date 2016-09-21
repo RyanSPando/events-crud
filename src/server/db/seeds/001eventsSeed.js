@@ -1,7 +1,6 @@
 var faker = require('faker');
 
 exports.seed = (knex, Promise) => {
-  // Deletes ALL existing entries
   return knex('venues').max('id').then(venues => {
     const maxVenues = venues[0].max;
     const minVenues = maxVenues - 2;
